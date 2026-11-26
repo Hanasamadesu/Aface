@@ -18,6 +18,6 @@ const nextConfig: NextConfig = {
   },
 };
 module.exports = {
-   allowedDevOrigins: ['*']
+   allowedDevOrigins: ['nallyfac.cloud']
 }
 export default nextConfig;

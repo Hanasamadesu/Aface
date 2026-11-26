@@ -3,7 +3,7 @@ import json
 import websockets
 import threading
 from pathlib import Path
-from ML import ModelL
+import ML
 CLIENTS = set()
 async def handle_client(websocket):
     CLIENTS.add(websocket)
@@ -39,10 +39,7 @@ def start_socket_server():
     asyncio.run(socket())
 def main():
     t1 = threading.Thread(target=start_socket_server)
-    t2 = threading.Thread(target=ModelL)
     t1.start()
-    t1.join()
-    t2.start()
-    t2.join()
+    ML.ModelL()
 if __name__ == "__main__":
     main()
