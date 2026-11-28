@@ -51,17 +51,6 @@ export function ConsentModal({
               and face detection and recognition using YuNet and SFace.
             </p>
           </div>
-          <div>
-            <h3 className="font-bold text-[#050505]">
-              2. Dataset Review &amp; Model Training Workflow
-            </h3>
-            <p>
-              Administrators can review and label saved snapshots in{" "}
-              <code className="rounded bg-black/10 px-1">Captures</code> to
-              continuously improve ASL, hand gesture, and face recognition
-              accuracy.
-            </p>
-          </div>
         </div>
 
         <div className="mt-4 flex items-center">
