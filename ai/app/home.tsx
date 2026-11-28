@@ -569,22 +569,6 @@ export function HomeCam() {
               Aface Vision Studio — YOLO + ConvNeXt + Face Recognition
             </span>
           </div>
-
-          <div className="flex items-center gap-2">
-            {cameraOn && (
-              <span className="flex items-center gap-1.5 rounded-full bg-[#ff383b]/15 px-3 py-1 text-[11px] font-bold text-[#d70015]">
-                <span className="h-2 w-2 animate-pulse rounded-full bg-[#ff383b]" />
-                REC {formatDuration(recordSeconds)} • 1s Capture
-              </span>
-            )}
-            <button
-              type="button"
-              onClick={() => setConsentOpen(true)}
-              className="rounded-full bg-white/60 px-3 py-1 text-[11px] font-semibold text-black/75 transition hover:bg-white/90"
-            >
-              Consent Terms
-            </button>
-          </div>
         </div>
 
         {/* Main Stage: Fullscreen iOS on mobile, Split Camera + Telemetry on macOS */}
@@ -607,19 +591,7 @@ export function HomeCam() {
                 className="h-full w-full object-cover"
               />
 
-              {!cameraOn && (
-                <div className="pointer-events-none absolute inset-0 flex flex-col items-center justify-center gap-2 px-6 text-center text-white">
-                  <div className="liquid-glass-dark rounded-[26px] px-6 py-4">
-                    <p className="text-base font-bold sm:text-lg">
-                      Camera Standby
-                    </p>
-                    <p className="mt-1 max-w-xs text-xs text-white/70">
-                      Starts live ASL, hand gesture, and face recognition with
-                      consented 1s capture and streamed video recording.
-                    </p>
-                  </div>
-                </div>
-              )}
+              
 
               {/* Live YOLO Hand & YuNet Face Overlays */}
               {cameraOn &&
@@ -746,25 +718,7 @@ export function HomeCam() {
                 </div>
               </div>
 
-              <div className="rounded-3xl bg-white/75 p-4 shadow-sm">
-                <p className="text-[11px] font-bold uppercase tracking-wider text-black/45">
-                  Consented Recording
-                </p>
-                <ul className="mt-2 space-y-1.5 text-xs font-medium text-black/75">
-                  <li className="flex items-center justify-between">
-                    <span>1s Photo Capture</span>
-                    <span className="font-bold">
-                      {cameraOn ? "Active" : "Paused"}
-                    </span>
-                  </li>
-                  <li className="flex items-center justify-between">
-                    <span>Live Video Stream</span>
-                    <span className="font-bold">
-                      {recording ? formatDuration(recordSeconds) : "Paused"}
-                    </span>
-                  </li>
-                </ul>
-              </div>
+              
             </div>
 
             <button
