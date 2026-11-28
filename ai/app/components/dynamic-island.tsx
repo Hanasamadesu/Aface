@@ -128,13 +128,6 @@ export function DynamicIsland({
                 >
                   {status}
                 </span>
-                {cameraOn && (
-                  <span className="text-[10px] font-semibold tracking-wide text-white/65">
-                    {recording
-                      ? `REC ${formatDuration(recordSeconds)} • 1s Snap`
-                      : "1s Snap Active"}
-                  </span>
-                )}
               </div>
             </div>
 
