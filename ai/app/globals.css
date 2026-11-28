@@ -22,7 +22,37 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", var(--font-geist-sans), Arial, sans-serif;
+}
+
+.liquid-glass {
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.72) 0%,
+    rgba(255, 255, 255, 0.42) 100%
+  );
+  backdrop-filter: blur(28px) saturate(185%);
+  -webkit-backdrop-filter: blur(28px) saturate(185%);
+  border: 1px solid rgba(255, 255, 255, 0.62);
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.14),
+    inset 0 1px 0 rgba(255, 255, 255, 0.85),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.25);
+}
+
+.liquid-glass-dark {
+  background: linear-gradient(
+    145deg,
+    rgba(16, 18, 22, 0.82) 0%,
+    rgba(6, 7, 10, 0.72) 100%
+  );
+  backdrop-filter: blur(28px) saturate(190%);
+  -webkit-backdrop-filter: blur(28px) saturate(190%);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow:
+    0 14px 36px rgba(0, 0, 0, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.28),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.08);
 }
 
 .status-motion-blur {
