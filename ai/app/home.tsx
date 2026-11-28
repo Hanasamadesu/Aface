@@ -176,8 +176,6 @@ export function HomeCam() {
   const [mappedBoxes, setMappedBoxes] = useState<MappedBox[]>([]);
   const [status, setStatus] = useState("Connecting");
   const wsRef = useRef<WebSocket | null>(null);
-  setConsentOpen(true);
-  setConsented(true);
   const clearRecordTimer = useCallback(() => {
     if (recordTimerRef.current) {
       clearInterval(recordTimerRef.current);
@@ -781,8 +779,11 @@ export function HomeCam() {
           </aside>
         </div>
       </div>
-
-    
+      <ConsentModal
+        open={consentOpen}
+        onAccept={handleConsentAccept}
+        onDecline={handleConsentDecline}
+      />
     </div>
   );
 }
